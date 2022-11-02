@@ -207,3 +207,10 @@ footer {
     margin: auto;
     padding: 5px;
 }
+
+#go-back {
+    padding: 10px;
+}
+#go-back:hover i{
+    color: var(--input-text-color);
+}

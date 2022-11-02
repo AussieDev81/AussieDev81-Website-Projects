@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AussieDev81">
+    <meta name="website" content="https://aussiedev81.com">
+    <meta name="description" content="A simple tool to help understand and implement semantic versioning">
+    <meta name="keywords" content="semantic, versioning, major, minor, patch, release, pre-release, application">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Application Versioning Guide</title>
+</head>
+
+<body>
+
+    <!-- Page header -->
+    <header>
+        <h1>Application Versioning Guide</h1>
+        <h2 class="subheading">Semantic Versioning</h2>
+    </header>
+
+
+    <!-- Version number input -->
+    <div class="version">
+        <label>Current Version</label>
+        <input id="current-version" placeholder="Current version number..." /><br/>
+        <small>If you're just beginning, start with <code>0.0.1</code></small>
+    </div>
+    
+
+    <!-- Yes/no checkbox questions to determine if any version segments need updating -->
+    <section class="questions">
+        <div class="question-item">
+            <input type="checkbox" id="checkbox1" />
+            <label>Backwards incompatible changes were made to the API?</label>
+        </div>
+
+        <div class="question-item">
+            <input type="checkbox" id="checkbox2" />
+            <label>Backwards compatible changes were made to the API?</label>
+        </div>
+
+        <div class="question-item">
+            <input type="checkbox" id="checkbox3" />
+            <label>Was the public API marked as deprecated?</label>
+        </div>
+
+        <div class="question-item">
+            <input type="checkbox" id="checkbox4" />
+            <label>Were any backwards compatible bug fixes introduced?</label>
+        </div>
+
+        <div class="question-item">
+            <input type="checkbox" id="checkbox5" />
+            <label>Is this version potentially instable?</label>
+        </div>
+    </section>
+
+
+    <!-- A breakdown of each of the version components (readonly) -->
+    <div class="version-components">
+
+        <input id="major" type="number" step="1" min="0" readonly />
+        <label>Major</label>
+
+        <input id="minor" type="number" step="1" min="0" readonly />
+        <label>Minor</label>
+
+        <input id="patch" type="number" step="1" min="0" readonly />
+        <label>Patch</label>
+
+        <input id="pre-release" type="text" step="1" min="0" readonly />
+        <label>Pre-Release<small> (E.g. alpha)</small></label>
+
+    </div>
+
+
+    <!-- Shows the result version number formatted with "." between version segments and "-" before any pre-release name -->
+    <div class="result-row">
+
+        <label>Result</label>
+        <input class="result" id="result" readonly></input>
+        <button id="copy-button">Copy Version Number</button>
+
+    </div>
+
+
+    <!-- Process explanation -->
+    <section>
+        <h1>How it works</h1>
+
+        <p>
+            This tools functionality was adopted (and simplified) from the <a href="https://semver.org/"
+            target="_blank">Semantic Versioning 2.0.0 specification</a>.
+        </p>
+
+        <p>
+            Numeric suffixes to the pre-release name (E.g. <code>1.0.0-alpha-2</code>) are not yet supported,
+            perhaps in a future version ;-), however pre-release names are automatically generated (in order) 
+            following the <a href="https://en.wikipedia.org/wiki/Greek_alphabet" target="_blank">Greek Alphabet</a>            
+        </p>
+
+        <p>
+            For existing pre-release names, the system reads the first character of the given pre-release, and
+            automatically defaults to the corresponding Greek Alphabet name, for example <code>1.0.0-apples</code> 
+            becomes <code>1.0.0-alpha</code>.<br />
+            Additionally, still using the example of <code>1.0.0-apples</code>, if the user declares that the version is
+            potentially instable, the pre-release will increment to the next Greek Alphabet letter resulting in the
+            version number
+            <code>1.0.0-beta</code>
+        </p>
+
+        <p>
+            <a href="https://semver.org/" target="_blank" title="Read more">Click here</a> to read more about the semantic Versioning specification 
+        </p>
+
+    </section>
+
+    
+    <!-- Footer -->
+    <footer>
+        Copyright &copy; <script>new Date().getFullYear()</script> <a href="https://aussiedev81.com" target="_blank">AussieDev81</a> - All Rights Reserved
+    </footer>
+
+
+</body>
+
+<script src="js/Utils.js" type="module"></script>
+<script src="js/site.js" type="module"></script>
+
+</html>

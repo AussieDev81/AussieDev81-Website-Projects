@@ -1,0 +1,209 @@
+
+:root {
+    /* Text */
+    --font-family: monospace, 'Courier New', Courier;
+    --line-height: 1.5;
+    --font-size: 18px;
+    --font-size-small: 12px;
+    --font-size-header: 34px;
+    --font-size-footer: 18px;
+    --input-font-size: 20px;
+    /* Color */
+    --font-color: #009302;
+    --input-text-color: whitesmoke;
+    --site-bg-color: #1e1e1e;
+    --input-bg-color: #515151;
+    --code-bg-color: #2e2e2e;
+    --footer-border-color: #515151;
+    --validation-error-color: #ff6262;
+    /* Spacing */
+    --page-gutter-width: 100px;
+    --section-margin: 75px;
+    --section-width-restricted: 700px;
+    --checkbox-size: 25px;
+    --question-item-margin: 15px;
+    --footer-top-margin: 70px;
+}
+
+/* Mobile devices (portrait) */
+@media (max-width: 425px) {
+    body {
+        /* Text */
+        --font-size: 12px;
+        --font-size-small: 10px;
+        --font-size-footer: 12px;
+        --font-size-header: 24px;
+        /* Spacing */
+        --section-margin: 30px;
+        --page-gutter-width: 20px;
+        --question-item-margin: 5px;
+        --footer-top-margin: 30px;
+    }
+}
+
+/* Tablets (portrait) and mobile (landscape) */
+@media (min-width: 426px) {
+    body {
+        /* Text */
+        --font-size: 16px;
+        --font-size-header: 28px;
+        /* Spacing */
+        --section-margin: 50px;
+        --page-gutter-width: 30px;
+        --question-item-margin: 10px;
+    }
+}
+
+body {
+    background-color: var(--site-bg-color);
+    margin: var(--section-margin) var(--page-gutter-width);
+    line-height: var(--line-height);
+}
+
+body * {
+    color: var(--font-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+input {
+    height: 100%;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-size: var(--input-font-size);
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--code-bg-color);
+}
+
+small {
+    font-variant: normal;
+    font-weight: lighter;
+    font-size: var(--font-size-small);
+}
+
+header, header h1 {
+    text-align: center;
+    font-size: var(--font-size-header);
+    margin-bottom: 0;
+}
+
+button {
+    background-color: var(--input-text-color);
+    color: var(--site-bg-color);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--input-text-color);
+    background-color: var(--font-color);
+}
+
+footer {
+    margin-top: var(--footer-top-margin);
+    text-align: center;
+    padding: 10px;
+    font-size: var(--font-size-footer);
+    border-top: solid 1px var(--footer-border-color);
+    border-bottom: solid 1px var(--footer-border-color);
+}
+
+
+/* Site subheading */
+.subheading {
+    margin-top: 0px;
+    font-size: calc(var(--font-size-header) * .6);
+}
+
+
+/* Current version number */
+.version {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    padding: 5px;
+    margin: var(--section-margin) auto;
+    max-width: var(--section-width-restricted);
+    gap: 10px;
+}
+
+.version .invalid {
+    background-color: var(--validation-error-color);
+}
+
+.version label {
+    white-space: nowrap;
+}
+
+.version input {
+    width: 100%;
+    max-width: calc(var(--section-width-restricted) * .75);
+}
+
+.version small, code {
+    margin: auto;
+}
+
+.version small code {
+    font-size: var(--font-size-small);
+}
+
+
+/* Questions */
+.questions {
+    margin: var(--section-margin) auto;
+    max-width: var(--section-width-restricted);
+}
+
+.question-item {
+    grid-column: 1 / 3;
+    color: var(--text-color);
+    margin: var(--question-item-margin) 0;
+}
+
+.question-item input {
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    vertical-align: middle;
+}
+
+
+/* Version components */
+.version-components {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: var(--section-margin) auto;
+}
+
+.version-components * {
+    max-width: 200px;
+}
+
+.version-components input {
+    width: 100px;
+    justify-self: end;
+}
+
+
+/* Result version number */
+.result-row {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(var(--section-width-restricted) * .75);
+    margin: var(--section-margin) auto;
+}
+
+.result-row * {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.result-row button {
+    margin: auto;
+    padding: 5px;
+}

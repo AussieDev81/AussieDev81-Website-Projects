@@ -8,7 +8,7 @@ const navContent = (page) => {
 					<span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="/" class="navbar-brand"  title="Back to main website"><span>AussieDev81</span></a>
+				<a href="https://aussiedev81.com/" class="navbar-brand"  title="Back to main website"><span>AussieDev81</span></a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">

@@ -12,7 +12,7 @@ const navContent = (page) => {
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/" ${page.toUpperCase() === "HOME" ? 'class="active"' : ""}>PORTAL</a></li>
+					<li><a href="/" ${page.toUpperCase() === "PORTAL" ? 'class="active"' : ""}>PORTAL</a></li>
 					<li><a href="/projects" ${page.toUpperCase() === "PROJECTS" ? 'class="active"' : ""}>PROJECTS</a></li>
 					<li><a href="/boredom" ${page.toUpperCase() === "BOREDOM" ? 'class="active"' : ""}>BOREDOM BUSTERS</a></li>
 				</ul>

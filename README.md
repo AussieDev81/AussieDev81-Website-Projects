@@ -3,6 +3,11 @@ This repository contains some "static" web projects that will be shown under the
 ## [Projects Home](https://projects.aussiedev81.com "https://projects.aussiedev81.com")
 Landing page for the `projects` subdomain, this page serves as a project directory.
 
+## [Projects](https://projects.aussiedev81.com/projects "https://projects.aussiedev81.com/projects")
+A collection of projects to be showcased
+
+## [Boredom Busters](https://projects.aussiedev81.com/boredom "https://projects.aussiedev81.com/boredom")
+A collection of projects that I created out of sheer boredom
 
 
 ## [Application Versioning Guide](https://projects.aussiedev81.com/versioning-guide "https://projects.aussiedev81.com/versioning-guide")

@@ -8,14 +8,13 @@ const navContent = (page) => {
 					<span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="/" class="navbar-brand"><span>AussieDev81</span></a>
+				<a href="/" class="navbar-brand"  title="Back to main website"><span>AussieDev81</span></a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/" 	 ${page.toUpperCase() === "HOME" ? 'class="active"' : ""} 	   >HOME</a></li>
-					<li><a href="about" 	 ${page.toUpperCase() === "ABOUT" ? 'class="active"' : ""}	   >ABOUT</a></li>
-					<li><a href="portfolio" ${page.toUpperCase() === "PORTFOLIO" ? 'class="active"' : ""} >PORTFOLIO</a></li>
-					<li><a href="contact" 	 ${page.toUpperCase() === "CONTACT" ? 'class="active"' : ""}   >CONTACT</a></li>
+					<li><a href="/" ${page.toUpperCase() === "HOME" ? 'class="active"' : ""}>PORTAL</a></li>
+					<li><a href="projects" ${page.toUpperCase() === "PROJECTS" ? 'class="active"' : ""}>PROJECTS</a></li>
+					<li><a href="boredom" ${page.toUpperCase() === "BOREDOM" ? 'class="active"' : ""}>BOREDOM BUSTERS</a></li>
 				</ul>
 			</div>
 		</div>
@@ -131,10 +130,14 @@ const footerContent = () => {
 
 				<div class="col-md-4 col-sm-6">
 					<h3>Menu</h3>
-					<p><a href="/">Home</a></p>
-					<p><a href="about">About</a></p>
-					<p><a href="portfolio">Portfolio</a></p>
-					<p><a href="contact">Contact</a></p>
+					<p><a href="https://aussiedev81.com/">Home</a></p>
+					<p><a href="https://aussiedev81.com/about">About</a></p>
+					<p><a href="https://aussiedev81.com/portfolio">Portfolio</a></p>
+					<p><a href="https://aussiedev81.com/contact">Contact</a></p>
+					<p><a href="/">Project Portal</a></p>
+					<p><a href="projects">Projects</a></p>
+					<p><a href="boredom">Boredom Busters</a></p>
+					
 				</div>
 
 				<div class="col-md-4 col-sm-6">

@@ -14,6 +14,15 @@ Semantic versioning is also something I question myself about on almost every pr
 
 I hope it's as useful to you as it is to me 😁
 
+## [Age Calculator](https://projects.aussiedev81.com/age-calculator "https://projects.aussiedev81.com/age-calculator")
+
+
+Another result of boredom over the holidays, this simple age calculator takes your date of birth as input, and displays your current age broken down into `Years`, `Months`, and `Days`.
+
+In addition, a modal window will be displayed where a group of monkeys can sing and dance for you if it is your birthday.
+
+While small and seemingly insignificant, this calculator just goes to show that my brain never completely relaxes 😆
+
 ___
 🌐 [aussiedev81.com](https://aussiedev81.com/)<br/>
 📧 [info@aussiedev81.com](mailto:info@aussiedev81.com)

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site icons -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nathan Snow, AussieDev81">
+    <meta name="website" content="https://aussiedev81.com">
+    <meta name="description" content="A calculator that tells you how many years, months, and days you've been alive">
+    <meta name="keywords" content="calculator, JavaScript, birthday, age, surprise, modal, autoplay, Bored">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://aussiedev81.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AussieDev81">
+    <meta property="og:description" content="Software Engineer">
+    <meta property="og:image" content="/images/developer.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="aussiedev81.com">
+    <meta property="twitter:url" content="https://aussiedev81.com">
+    <meta name="twitter:title" content="AussieDev81">
+    <meta name="twitter:description" content="Software Engineer">
+    <meta name="twitter:image" content="/images/developer.jpg">
+    <link rel="stylesheet" href="./css/age-calculator.css" />
+    <script rel="preconnect" src="https://kit.fontawesome.com/068920eb91.js" crossorigin="anonymous"></script>
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <!-- Goes back to https://projects/aussiedev81.com -->
+    <a href="/"><button id="go-back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</button></a>
+
+    <!--User info-->
+    <div class="info">
+        <p>
+            Simply enter your birth day, month, and year to see the length of time you have been alive.
+        </p>
+        <p>
+            As a special treat, you will be presented with a gift on your birthday!<br />
+            <strong>Want to test it out?</strong>... &nbsp; Enter <span class="lined">
+                <script>document.write(`<strong>${new Date().getDate()}</strong>`);</script> as the day
+            </span> and <span class="lined">
+                <script>document.write(`<strong>${new Date().getMonth() + 1}</strong>`);</script> as the month
+            </span>
+            &nbsp;<i>(any year will do)</i>
+        </p>
+    </div>
+
+    <!--Container for an "app-like" look & feel-->
+    <div class="container">
+        <h1 class="heading-top">Age Calculator</h1>
+
+        <!--Date of birth input form-->
+        <form id="input-form">
+            <label for="day">Date</label>
+            <input type="number" name="date" id="day" placeholder="dd" required="required" minlength="1"
+                maxlength="2" />
+            <label for="month">Month</label>
+            <input type="number" name="month" id="month" placeholder="mm" required="required" minlength="1"
+                maxlength="2" />
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" placeholder="yyyy" required="required" minlength="4"
+                maxlength="4" />
+            <input type="button" name="submit" value="Submit" onclick="calculateAge(this.form)" />
+        </form>
+
+        <!--Error messages displayed here-->
+        <div id="error-msg" hidden></div>
+
+        <!--Age results will be displayed here-->
+        <div id="age-results"></div>
+
+        <!--Birthday video modal-->
+        <div id="modal" class="blur-bg">
+            <iframe id="birthday-video" width="560" height="315"
+                src="https://www.youtube.com/embed/HvYgke2fBeg?controls=0&loop=1" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <div>
+                <span class="close">&times;</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/age-calculator.js"></script>
+</body>

@@ -29,5 +29,6 @@ In addition, a modal window will be displayed where a group of monkeys can sing 
 While small and seemingly insignificant, this calculator just goes to show that my brain never completely relaxes 😆
 
 ___
+Nathan
 🌐 [aussiedev81.com](https://aussiedev81.com/)<br/>
 📧 [info@aussiedev81.com](mailto:info@aussiedev81.com)
